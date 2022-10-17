@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AWS on Laurance&#39;s Note</title>
+        <link>https://note.laurance.ml/tags/aws/</link>
+        <description>Recent content in AWS on Laurance&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://note.laurance.ml/tags/aws/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AWS-Codecommit SSH 金鑰上傳及設置</title>
+        <link>https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/</link>
+        <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/100.png" alt="Featured image of post AWS-Codecommit SSH 金鑰上傳及設置" /&gt;&lt;pre&gt;&lt;code&gt;先到個人帳號家目錄下的.ssh 製作金鑰
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/001.png&#34;
+	width=&#34;1917&#34;
+	height=&#34;627&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/001_hud03c8775a2ef0bfc9c4713aaea8e6d66_36373_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/001_hud03c8775a2ef0bfc9c4713aaea8e6d66_36373_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;305&#34;
+		data-flex-basis=&#34;733px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;製作完後會有兩支檔案
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/003.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;860&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/003_hue4cbce95022f44e9a118346c4c9476fe_40880_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/003_hue4cbce95022f44e9a118346c4c9476fe_40880_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;223&#34;
+		data-flex-basis=&#34;535px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;製作完後將id_rsa.pub 上傳至AWS-IAM個人帳號
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/004.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;937&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/004_huc89d2172e87f3dd0f4db657e5e7fd266_134475_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/004_huc89d2172e87f3dd0f4db657e5e7fd266_134475_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;204&#34;
+		data-flex-basis=&#34;491px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;上傳後會得到SSH密鑰 ID
+
+將ID複製下來
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/005.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;937&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/005_hu550ea9608d9509aeda391104641e500f_143704_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/005_hu550ea9608d9509aeda391104641e500f_143704_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;204&#34;
+		data-flex-basis=&#34;491px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;再回到機器帳號跟目錄下的.ssh
+
+vim config
+Host git-codecommit.ap-northeast-2.amazonaws.com &amp;lt; --只需要地區，目錄不用
+User SSH密鑰 ID
+IdentityFile ~/.ssh/id_rsa &amp;lt;--私鑰檔案路徑
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/007.png&#34;
+	width=&#34;1918&#34;
+	height=&#34;245&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/007_hu2c842958113359c656c7e269ae3afb1b_8539_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/007_hu2c842958113359c656c7e269ae3afb1b_8539_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;782&#34;
+		data-flex-basis=&#34;1878px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Codecommit的位置取得
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/006.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;824&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/006_hu45f65da6599c87c94b9576eb767a87a1_83414_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/006_hu45f65da6599c87c94b9576eb767a87a1_83414_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;559px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;新增完成後將檔案權限改為 600
+chmod 600 config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/008.png&#34;
+	width=&#34;1918&#34;
+	height=&#34;342&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/008_huc7da9f16d29884bbff1fcb0dfb39cdf7_30920_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-codecommit-ssh-%E9%87%91%E9%91%B0%E4%B8%8A%E5%82%B3%E5%8F%8A%E8%A8%AD%E7%BD%AE/008_huc7da9f16d29884bbff1fcb0dfb39cdf7_30920_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;560&#34;
+		data-flex-basis=&#34;1345px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;即完成設定
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>AWS-Cloudfront CDN快取清除</title>
+        <link>https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/</link>
+        <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/100.png" alt="Featured image of post AWS-Cloudfront CDN快取清除" /&gt;&lt;pre&gt;&lt;code&gt;到AWS-Cloudfront後台 選取要清除暫存的SITE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/01.png&#34;
+	width=&#34;1724&#34;
+	height=&#34;896&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/01_huc51b3d1afcb9912922be05517b8a9b70_461963_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/01_huc51b3d1afcb9912922be05517b8a9b70_461963_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;461px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;選取Invalidations 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/02.png&#34;
+	width=&#34;1438&#34;
+	height=&#34;610&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/02_hua7d4cb57a33b0b7bef3a3c2f8e0e825d_38094_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/02_hua7d4cb57a33b0b7bef3a3c2f8e0e825d_38094_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;565px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/* 表示清除所有 再點選Create invalidation即可
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/03.png&#34;
+	width=&#34;870&#34;
+	height=&#34;422&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/03_huec5ee1d0b87bd9262ed93f2d201e287a_25976_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-cloudfront-cdn%E5%BF%AB%E5%8F%96%E6%B8%85%E9%99%A4/03_huec5ee1d0b87bd9262ed93f2d201e287a_25976_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;494px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>AWS-EC2 AMI轉地區&amp;帳號</title>
+        <link>https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/</link>
+        <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/100.png" alt="Featured image of post AWS-EC2 AMI轉地區&amp;帳號" /&gt;&lt;pre&gt;&lt;code&gt;在ec2→ami底下Actions選Copy AMI
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/01.png&#34;
+	width=&#34;392&#34;
+	height=&#34;261&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/01_hu81a29e4b0703ba5e7465359355b0ca8f_15365_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/01_hu81a29e4b0703ba5e7465359355b0ca8f_15365_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;在Destination region 選擇要移轉的地區
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/02.png&#34;
+	width=&#34;754&#34;
+	height=&#34;483&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/02_hu860d160c072b0d4f4a6a4acef88a56fd_56680_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/02_hu860d160c072b0d4f4a6a4acef88a56fd_56680_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;374px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;在Pemissions底下按edit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/03.png&#34;
+	width=&#34;764&#34;
+	height=&#34;166&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/03_hu9e441c479cbb2203d52dbb420785c8de_17115_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/03_hu9e441c479cbb2203d52dbb420785c8de_17115_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;460&#34;
+		data-flex-basis=&#34;1104px&#34;
+	
+&gt;
+&lt;img src=&#34;https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/04.png&#34;
+	width=&#34;419&#34;
+	height=&#34;271&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/04_hufcd3dfdabc6692727b7ea3b29aaa8e2a_26402_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/04_hufcd3dfdabc6692727b7ea3b29aaa8e2a_26402_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;371px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;在AWS Account Number 輸入要移轉的帳號
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/05.png&#34;
+	width=&#34;710&#34;
+	height=&#34;377&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/05_hue408912f48cf21e03b4c60a103edd6d0_21998_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-ec2-ami%E8%BD%89%E5%9C%B0%E5%8D%80%E5%B8%B3%E8%99%9F/05_hue408912f48cf21e03b4c60a103edd6d0_21998_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>AWS-EC2 mysql-slave跟隨RDS教學</title>
+        <link>https://note.laurance.ml/p/aws-ec2-mysql-slave%E8%B7%9F%E9%9A%A8rds%E6%95%99%E5%AD%B8/</link>
+        <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/aws-ec2-mysql-slave%E8%B7%9F%E9%9A%A8rds%E6%95%99%E5%AD%B8/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/aws-ec2-mysql-slave%E8%B7%9F%E9%9A%A8rds%E6%95%99%E5%AD%B8/100.png" alt="Featured image of post AWS-EC2 mysql-slave跟隨RDS教學" /&gt;&lt;pre&gt;&lt;code&gt;將RDS Master的binlog保留時間延長至12小時
+CALL mysql.rds_set_configuration(&#39;binlog retention hours&#39;, 12);
+
+先記下RDS Master當前進度。
+show master status\G;
+
+建立一個臨時用的RDS-replica, 規格建議為 db.m3.xlarge 以上
+
+進入臨時用的RDS-replica內停止主從並記錄進度
+CALL mysql.rds_stop_replication;
+show slave status\G;
+
+匯出DB並排除幾個系統預設庫。
+mysql -e &amp;quot;show databases;&amp;quot; -uroot -p -hRDS-master連結位置 | grep -Ev &amp;quot;Database|XXX_mariadb|information_schema|innodb|mysql|performance_schema&amp;quot; | xargs mysqldump -uroot -p -hRDS-master連結位置 --databases &amp;gt; db.sql 
+
+RDS裡的mysql庫有幾個獨有的table，一般自己裝的mariaDB沒有那些table，需要獨立匯出特定那幾個table。
+mysqldump -uroot -p mysql rds_configuration rds_global_status_history rds_global_status_history_old rds_heartbeat2 rds_history rds_replication_status rds_sysinfo slow_log_template &amp;gt; RDS_mysql.sql
+
+停止EC2-Slave機的MySQL服務, 將mysql庫裡rds字頭的表通通刪掉, 外面全部的正式站的庫都刪掉(保留服務預設的庫)與白字檔(保留ib開頭檔案)後，再啟動服務。
+rm -f /var/lib/mysql/mysql/rds*
+rm -f [大寫英文字母開頭的目錄] [白字檔]
+mysqld_save&amp;amp;
+
+匯入資料庫
+mysql -uking -p &amp;lt; db.sql
+
+匯入獨有table
+mysql -uking -p mysql &amp;lt; RDS_mysql.sql
+
+檢查沒問題後，下跟隨
+CHANGE MASTER TO MASTER_HOST=&#39;RDS-master連結位置&#39;, MASTER_USER=&#39;主從帳號&#39;, MASTER_PASSWORD=&#39;主從密碼&#39;;  ----跟隨RDS-master
+CHANGE MASTER TO MASTER_LOG_FILE = &#39;bin-log檔名&#39;,MASTER_LOG_POS =進度;
+start slave;
+show slave status\G;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>AWS-變更 Management Console 的語言</title>
+        <link>https://note.laurance.ml/p/aws-%E8%AE%8A%E6%9B%B4-management-console-%E7%9A%84%E8%AA%9E%E8%A8%80/</link>
+        <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/aws-%E8%AE%8A%E6%9B%B4-management-console-%E7%9A%84%E8%AA%9E%E8%A8%80/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/aws-%E8%AE%8A%E6%9B%B4-management-console-%E7%9A%84%E8%AA%9E%E8%A8%80/100.png" alt="Featured image of post AWS-變更 Management Console 的語言" /&gt;&lt;pre&gt;&lt;code&gt;登入 AWS Management Console
+
+在導覽列上選擇您的帳戶名稱
+
+選擇 Settings (設定)，開啟 Unified Settings (統一設定) 頁面
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-%E8%AE%8A%E6%9B%B4-management-console-%E7%9A%84%E8%AA%9E%E8%A8%80/01.png&#34;
+	width=&#34;323&#34;
+	height=&#34;430&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-%E8%AE%8A%E6%9B%B4-management-console-%E7%9A%84%E8%AA%9E%E8%A8%80/01_hu1d0b4c661f5f9a3f9f42c01d8f1da766_22953_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-%E8%AE%8A%E6%9B%B4-management-console-%E7%9A%84%E8%AA%9E%E8%A8%80/01_hu1d0b4c661f5f9a3f9f42c01d8f1da766_22953_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;75&#34;
+		data-flex-basis=&#34;180px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;在 Unified Settings (統一設定) 中，選擇位於 Localization and default Region (本地化和預設區域) 旁的 Edit (編輯)
+
+選取您想在主控台使用的語言，然後選擇 Save changes (儲存變更)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-%E8%AE%8A%E6%9B%B4-management-console-%E7%9A%84%E8%AA%9E%E8%A8%80/02.png&#34;
+	width=&#34;1616&#34;
+	height=&#34;270&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-%E8%AE%8A%E6%9B%B4-management-console-%E7%9A%84%E8%AA%9E%E8%A8%80/02_huad51be6d1263999847d22182add03ff0_20974_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-%E8%AE%8A%E6%9B%B4-management-console-%E7%9A%84%E8%AA%9E%E8%A8%80/02_huad51be6d1263999847d22182add03ff0_20974_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;598&#34;
+		data-flex-basis=&#34;1436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>AWS-AMIs授權給其他帳號</title>
+        <link>https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/</link>
+        <pubDate>Fri, 05 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/100.png" alt="Featured image of post AWS-AMIs授權給其他帳號" /&gt;&lt;pre&gt;&lt;code&gt;到AWS控制台
+
+選擇AMIs &amp;gt; 點選 Modify Image Permissions    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/01.png&#34;
+	width=&#34;722&#34;
+	height=&#34;652&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/01_hu2869c7fa39359f0ea46b527a1903e74a_165554_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/01_hu2869c7fa39359f0ea46b527a1903e74a_165554_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;110&#34;
+		data-flex-basis=&#34;265px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;輸入 新帳號的Account Id &amp;gt; Add Permission &amp;gt; 下面的勾勾打勾 &amp;gt; save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/02.png&#34;
+	width=&#34;701&#34;
+	height=&#34;378&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/02_huc724d72bf9f8b9ab347a2c284369f78c_37948_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/02_huc724d72bf9f8b9ab347a2c284369f78c_37948_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;185&#34;
+		data-flex-basis=&#34;445px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;再到新帳號的AWS控制台&amp;gt; EC2 &amp;gt; AMIs &amp;gt; private images 即可看到剛剛授權的AMIs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/03.png&#34;
+	width=&#34;707&#34;
+	height=&#34;616&#34;
+	srcset=&#34;https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/03_hub2d878c535fbd624332e5b5855ded909_75103_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/aws-amis%E6%8E%88%E6%AC%8A%E7%B5%A6%E5%85%B6%E4%BB%96%E5%B8%B3%E8%99%9F/03_hub2d878c535fbd624332e5b5855ded909_75103_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;275px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.aws.amazon.com/zh_tw/AWSEC2/latest/UserGuide/sharingamis-explicit.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文件&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>AWS-VPC 建置</title>
+        <link>https://note.laurance.ml/p/aws-vpc-%E5%BB%BA%E7%BD%AE/</link>
+        <pubDate>Fri, 05 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/aws-vpc-%E5%BB%BA%E7%BD%AE/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/aws-vpc-%E5%BB%BA%E7%BD%AE/100.png" alt="Featured image of post AWS-VPC 建置" /&gt;&lt;pre&gt;&lt;code&gt;1.建立1個VPC
+
+2.新增4個subnets (2個Public、2個private) 用途:預防AZ出現故障無法切換
+
+3.新增Internet gateways，並將IGW掛上VPC。
+
+4.新增NAT gateways，選擇Public subnet，並給一個外網IP。
+
+5.新增2個route table，1個叫igw、1個叫nat。
+
+6.subnets 套用route talbe，Public套用igw，private套用nat。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>AWS-下載aws-cli使用終端控制</title>
+        <link>https://note.laurance.ml/p/aws-%E4%B8%8B%E8%BC%89aws-cli%E4%BD%BF%E7%94%A8%E7%B5%82%E7%AB%AF%E6%8E%A7%E5%88%B6/</link>
+        <pubDate>Fri, 05 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/aws-%E4%B8%8B%E8%BC%89aws-cli%E4%BD%BF%E7%94%A8%E7%B5%82%E7%AB%AF%E6%8E%A7%E5%88%B6/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/aws-%E4%B8%8B%E8%BC%89aws-cli%E4%BD%BF%E7%94%A8%E7%B5%82%E7%AB%AF%E6%8E%A7%E5%88%B6/100.png" alt="Featured image of post AWS-下載aws-cli使用終端控制" /&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;下載AWS管理工具
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl &amp;#34;https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip&amp;#34; -o &amp;#34;awscliv2.zip&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unzip awscliv2.zip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ./aws/install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aws --version&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>AWS-撈出RDS的binlog</title>
+        <link>https://note.laurance.ml/p/aws-%E6%92%88%E5%87%BArds%E7%9A%84binlog/</link>
+        <pubDate>Fri, 05 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/aws-%E6%92%88%E5%87%BArds%E7%9A%84binlog/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/aws-%E6%92%88%E5%87%BArds%E7%9A%84binlog/100.png" alt="Featured image of post AWS-撈出RDS的binlog" /&gt;&lt;pre&gt;&lt;code&gt;撈出 RDS binlog
+
+cd /home/mariadb/binlog
+
+mysqlbinlog --base64-output=decode-rows -v --set-charset=&amp;quot;utf8&amp;quot; --start-datetime=&amp;quot;2021-11-04 14:06:00&amp;quot; --stop-datetime=&amp;quot;2021-11-04 14:09:00&amp;quot;   mysql-bin-changelog.450599 &amp;gt; /home/laurance/RDS-1104-1405-1410.sql
+
+SCP過去跳板機
+
+scp RDS-1005-1330-1430.sql laurance@admin:~ 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>AWS-配置金鑰在LINUX登入</title>
+        <link>https://note.laurance.ml/p/aws-%E9%85%8D%E7%BD%AE%E9%87%91%E9%91%B0%E5%9C%A8linux%E7%99%BB%E5%85%A5/</link>
+        <pubDate>Fri, 05 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/aws-%E9%85%8D%E7%BD%AE%E9%87%91%E9%91%B0%E5%9C%A8linux%E7%99%BB%E5%85%A5/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/aws-%E9%85%8D%E7%BD%AE%E9%87%91%E9%91%B0%E5%9C%A8linux%E7%99%BB%E5%85%A5/100.png" alt="Featured image of post AWS-配置金鑰在LINUX登入" /&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aws configure
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AWS Access Key ID [None]: XXXXXXXXXXXXXXXXXXX
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AWS Secret Access Key [None]: XXXXXXXXXXXXXXXXXXX
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Default region name [None]: ap-northeast-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Default output format [None]: json&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Redis on Laurance&#39;s Note</title>
+        <link>https://note.laurance.ml/tags/redis/</link>
+        <description>Recent content in Redis on Laurance&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 13 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://note.laurance.ml/tags/redis/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Redis-設置Redis密碼</title>
+        <link>https://note.laurance.ml/p/redis-%E8%A8%AD%E7%BD%AEredis%E5%AF%86%E7%A2%BC/</link>
+        <pubDate>Thu, 13 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/redis-%E8%A8%AD%E7%BD%AEredis%E5%AF%86%E7%A2%BC/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/redis-%E8%A8%AD%E7%BD%AEredis%E5%AF%86%E7%A2%BC/100.png" alt="Featured image of post Redis-設置Redis密碼" /&gt;&lt;p&gt;&lt;strong&gt;方法一&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;修改 redis 設定檔 (requirepass 參數)
+
+PWD: /usr/local/redis/etc/redis.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/redis-%E8%A8%AD%E7%BD%AEredis%E5%AF%86%E7%A2%BC/00000001.png&#34;
+	width=&#34;957&#34;
+	height=&#34;859&#34;
+	srcset=&#34;https://note.laurance.ml/p/redis-%E8%A8%AD%E7%BD%AEredis%E5%AF%86%E7%A2%BC/00000001_hua7f2bf730d118c5e4aedf81e044ee389_60461_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/redis-%E8%A8%AD%E7%BD%AEredis%E5%AF%86%E7%A2%BC/00000001_hua7f2bf730d118c5e4aedf81e044ee389_60461_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;267px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;修改完之後重啟服務
+
+service redis restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;方法二&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;進服務修改 Password (此方法 Redis 重啟後，密碼會失效)
+
+# 設定密碼
+
+127.0.0.1:6379&amp;gt; config set requirepass 123456
+
+# 查詢密碼
+
+127.0.0.1:6379&amp;gt; config get requirepass
+
+# 驗證密碼
+
+127.0.0.1:6379&amp;gt; auth 123456
+
+127.0.0.1:6379&amp;gt; config get requirepass
+
+1) &amp;quot;requirepass&amp;quot;
+2) &amp;quot;123456&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;登入指令&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;redis-cli -p 6379 -a test123
+
+redis 127.0.0.1:6379&amp;gt; auth test123
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>Redis-安裝教學</title>
+        <link>https://note.laurance.ml/p/redis-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/</link>
+        <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/redis-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/redis-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/100.png" alt="Featured image of post Redis-安裝教學" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://download.redis.io/releases/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Index of redis&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tar zxvf redis-4.0.6.tar.gz
+
+cd /root/redis-4.0.6
+
+make MALLOC=libc
+
+make PREFIX=/usr/local/redis install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Redis配置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir /usr/local/redis/etc/
+
+cp redis.conf /usr/local/redis/etc/
+
+cd /usr/local/redis/bin/
+
+cp redis-benchmark redis-cli redis-server /usr/bin/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改redis配置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vim /usr/local/redis/etc/redis.conf
+
+bind 0.0.0.0
+
+daemonize yes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;redis ( 腳本 )&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+#chkconfig: 2345 80 90
+# Simple Redis init.d script conceived to work on Linux systems
+# as it does use of the /proc filesystem.
+
+PATH=/usr/local/bin:/sbin:/usr/bin:/bin
+REDISPORT=6379
+EXEC=/usr/local/redis/bin/redis-server
+REDIS_CLI=/usr/local/redis/bin/redis-cli
+
+PIDFILE=/var/run/redis_6379.pid
+CONF=&amp;quot;/usr/local/redis/etc/redis.conf&amp;quot;
+
+case &amp;quot;$1&amp;quot; in
+start)
+if [ -f $PIDFILE ]
+then
+echo &amp;quot;$PIDFILE exists, process is already running or crashed&amp;quot;
+else
+echo &amp;quot;Starting Redis server...&amp;quot;
+$EXEC $CONF
+fi
+if [ &amp;quot;$?&amp;quot;=&amp;quot;0&amp;quot; ]
+then
+echo &amp;quot;Redis is running...&amp;quot;
+fi
+;;
+stop)
+if [ ! -f $PIDFILE ]
+then
+echo &amp;quot;$PIDFILE does not exist, process is not running&amp;quot;
+else
+PID=$(cat $PIDFILE)
+echo &amp;quot;Stopping ...&amp;quot;
+$REDIS_CLI -p $REDISPORT SHUTDOWN
+while [ -x ${PIDFILE} ]
+do
+echo &amp;quot;Waiting for Redis to shutdown ...&amp;quot;
+sleep 1
+done
+echo &amp;quot;Redis stopped&amp;quot;
+fi
+;;
+restart|force-reload)
+${0} stop
+${0} start
+;;
+*)
+echo &amp;quot;Usage: /etc/init.d/redis {start|stop|restart|force-reload}&amp;quot; &amp;gt;&amp;amp;2
+exit 1
+esac
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;啟動檔&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cp redis /etc/init.d/
+
+chmod 755 /etc/init.d/redis
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;添加至開機啟動&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chkconfig --add redis
+
+chkconfig --level 2345 redis on
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>Linux-REDIS-編譯安裝</title>
+        <link>https://note.laurance.ml/p/linux-redis-%E7%B7%A8%E8%AD%AF%E5%AE%89%E8%A3%9D/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/linux-redis-%E7%B7%A8%E8%AD%AF%E5%AE%89%E8%A3%9D/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/linux-redis-%E7%B7%A8%E8%AD%AF%E5%AE%89%E8%A3%9D/100.png" alt="Featured image of post Linux-REDIS-編譯安裝" /&gt;&lt;pre&gt;&lt;code&gt;###################################
+
+http://download.redis.io/releases/
+
+###################################
+
+wget - tar-zxvf - cd - 
+
+###################################
+
+make MALLOC=libc
+
+make PREFIX=/usr/local/redis install
+
+###################################
+
+Redis配置
+
+###################################
+
+mkdir /usr/local/redis/etc/
+
+cp redis.conf /usr/local/redis/etc/
+
+cd /usr/local/redis/bin/
+
+cp redis-benchmark redis-cli redis-server /usr/bin/
+
+###################################
+
+修改redis配置
+
+###################################
+
+vim /usr/local/redis/etc/redis.conf
+
+bind 0.0.0.0
+
+daemonize yes
+
+###################################
+
+vim redis ( 腳本 )
+
+###################################
+
+#!/bin/bash
+#chkconfig: 2345 80 90
+# Simple Redis init.d script conceived to work on Linux systems
+# as it does use of the /proc filesystem.
+
+PATH=/usr/local/bin:/sbin:/usr/bin:/bin
+REDISPORT=6379
+EXEC=/usr/local/redis/bin/redis-server
+REDIS_CLI=/usr/local/redis/bin/redis-cli
+
+PIDFILE=/var/run/redis_6379.pid
+CONF=&amp;quot;/usr/local/redis/etc/redis.conf&amp;quot;
+
+case &amp;quot;$1&amp;quot; in
+start)
+if [ -f $PIDFILE ]
+then
+echo &amp;quot;$PIDFILE exists, process is already running or crashed&amp;quot;
+else
+echo &amp;quot;Starting Redis server...&amp;quot;
+$EXEC $CONF
+fi
+if [ &amp;quot;$?&amp;quot;=&amp;quot;0&amp;quot; ]
+then
+echo &amp;quot;Redis is running...&amp;quot;
+fi
+;;
+stop)
+if [ ! -f $PIDFILE ]
+then
+echo &amp;quot;$PIDFILE does not exist, process is not running&amp;quot;
+else
+PID=$(cat $PIDFILE)
+echo &amp;quot;Stopping ...&amp;quot;
+$REDIS_CLI -p $REDISPORT SHUTDOWN
+while [ -x ${PIDFILE} ]
+do
+echo &amp;quot;Waiting for Redis to shutdown ...&amp;quot;
+sleep 1
+done
+echo &amp;quot;Redis stopped&amp;quot;
+fi
+;;
+restart|force-reload)
+${0} stop
+${0} start
+;;
+*)
+echo &amp;quot;Usage: /etc/init.d/redis {start|stop|restart|force-reload}&amp;quot; &amp;gt;&amp;amp;2
+exit 1
+esac
+
+###################################
+
+cp redis /etc/init.d/
+
+chmod 755 /etc/init.d/redis
+
+###################################
+
+chkconfig --list	                # 查看服務列表
+
+chkconfig --add redis		        # 添加服務
+
+chkconfig --level 2345 redis on		# 配制啟動級別
+
+###################################
+
+systemctl start redis
+
+###################################
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

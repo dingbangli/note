@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Laurance&#39;s Note</title>
+        <link>https://note.laurance.ml/categories/</link>
+        <description>Recent content in Categories on Laurance&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 13 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://note.laurance.ml/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Database</title>
+        <link>https://note.laurance.ml/categories/database/</link>
+        <pubDate>Thu, 13 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/database/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Kubernetes</title>
+        <link>https://note.laurance.ml/categories/kubernetes/</link>
+        <pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/kubernetes/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker</title>
+        <link>https://note.laurance.ml/categories/docker/</link>
+        <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/docker/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GCP</title>
+        <link>https://note.laurance.ml/categories/gcp/</link>
+        <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/gcp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SVN</title>
+        <link>https://note.laurance.ml/categories/svn/</link>
+        <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/svn/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SECTIGO</title>
+        <link>https://note.laurance.ml/categories/sectigo/</link>
+        <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/sectigo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>AWS</title>
+        <link>https://note.laurance.ml/categories/aws/</link>
+        <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/aws/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Web</title>
+        <link>https://note.laurance.ml/categories/web/</link>
+        <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/web/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Grafana</title>
+        <link>https://note.laurance.ml/categories/grafana/</link>
+        <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/grafana/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>influxdb</title>
+        <link>https://note.laurance.ml/categories/influxdb/</link>
+        <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/influxdb/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>telegraf</title>
+        <link>https://note.laurance.ml/categories/telegraf/</link>
+        <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/telegraf/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows</title>
+        <link>https://note.laurance.ml/categories/windows/</link>
+        <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/windows/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>XenCenter</title>
+        <link>https://note.laurance.ml/categories/xencenter/</link>
+        <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/xencenter/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>FortiGate</title>
+        <link>https://note.laurance.ml/categories/fortigate/</link>
+        <pubDate>Tue, 20 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/fortigate/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Cacti</title>
+        <link>https://note.laurance.ml/categories/cacti/</link>
+        <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/cacti/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://note.laurance.ml/categories/linux/</link>
+        <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GIT</title>
+        <link>https://note.laurance.ml/categories/git/</link>
+        <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python</title>
+        <link>https://note.laurance.ml/categories/python/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/python/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SOCKET5</title>
+        <link>https://note.laurance.ml/categories/socket5/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/socket5/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ssh-keygen</title>
+        <link>https://note.laurance.ml/categories/ssh-keygen/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/ssh-keygen/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Test</title>
+        <link>https://note.laurance.ml/categories/test/</link>
+        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/categories/test/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Mongodb on Laurance&#39;s Note</title>
+        <link>https://note.laurance.ml/tags/mongodb/</link>
+        <description>Recent content in Mongodb on Laurance&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 15 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://note.laurance.ml/tags/mongodb/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mongodb-安裝教學</title>
+        <link>https://note.laurance.ml/p/mongodb-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/</link>
+        <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/mongodb-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/mongodb-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/100.png" alt="Featured image of post Mongodb-安裝教學" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.mongodb.com/download-center#community&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MongoDB官網下載地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/mongodb-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/1.png&#34;
+	width=&#34;1058&#34;
+	height=&#34;331&#34;
+	srcset=&#34;https://note.laurance.ml/p/mongodb-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/1_hu383407a6f0b18c0736595579a8618037_116725_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/mongodb-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/1_hu383407a6f0b18c0736595579a8618037_116725_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;319&#34;
+		data-flex-basis=&#34;767px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/mongodb-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/2.png&#34;
+	width=&#34;1049&#34;
+	height=&#34;309&#34;
+	srcset=&#34;https://note.laurance.ml/p/mongodb-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/2_hu5cefca8362278e340378772afe0f9913_245137_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/mongodb-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/2_hu5cefca8362278e340378772afe0f9913_245137_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;339&#34;
+		data-flex-basis=&#34;814px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yum install libcurl openssl
+wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-4.0.28.tgz
+mkdir /usr/local/mongodb
+tar zxvf mongodb-linux-x86_64-4.0.28.tgz  -C /usr/local/
+mv /usr/local/mongodb-linux-x86_64-4.0.28/ mongodb/
+cd /usr/local/mongodb/
+mkdir data log conf
+cd data/ &amp;amp;&amp;amp; mkdir db/
+cd /usr/local/mongodb/conf &amp;amp;&amp;amp; touch mongodb.conf
+
+vim mongodb.conf
+dbpath = /usr/local/mongodb/data/db                     #資料檔案存放目錄  
+logpath = /usr/local/mongodb/log/mongodb.log            #日誌檔案存放目錄      
+port = 27017                                            #埠      
+fork = true                                             #以守護程式的方式啟用，即在後臺執行
+
+./bin/mongod --config ./conf/mongodb.conf               //啟動服務
+./bin/mongod --config ./conf/mongodb.conf --shutdown    //關閉服務
+./mongo		                                        //連線mongodb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>Mongodb-語法</title>
+        <link>https://note.laurance.ml/p/mongodb-%E8%AA%9E%E6%B3%95/</link>
+        <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/mongodb-%E8%AA%9E%E6%B3%95/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/mongodb-%E8%AA%9E%E6%B3%95/100.png" alt="Featured image of post Mongodb-語法" /&gt;&lt;p&gt;創建資料庫  (如果資料庫不存在，則創建並切換過去)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;use DATABASE_NAME
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;創建集合&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db.createCollection(&amp;quot;runoob&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查看集合&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;show collections &amp;amp;&amp;amp; show tables
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查看資料庫&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db.col.find()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;顯示目前數據庫&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查看所有數據庫&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;show dbs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;插入資料到數據庫&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db.test222.insert({&amp;quot;name&amp;quot;:&amp;quot;菜鳥&amp;quot;})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;刪除數據庫&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db.dropDatabase()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;删除集合&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db.collection.drop()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;創建固定集合mycol，集合空間大小6142800B，文檔最大個數10000個&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db.createCollection(&amp;quot;mycol&amp;quot;, { capped : true, autoIndexId : true, size : 6142800, max : 10000 } )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;集合插入多個文檔&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db.col.insert({title: &#39;MongoDB教程&#39;, 
+    description: &#39;MongoDB 是一個Nosql數據庫&#39;,
+    by: &#39;菜鳥&#39;,
+    url: &#39;https://note.laurance.ml&#39;,
+    tags: [&#39;mongodb&#39;, &#39;database&#39;, &#39;NoSQL&#39;],
+    likes: 100
+    })
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或是可以設成變量&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;document=({title: &#39;MongoDB教程&#39;, 
+    description: &#39;MongoDB 是一個Nosql數據庫&#39;,
+    by: &#39;菜鳥&#39;,
+    url: &#39;https://note.laurance.ml&#39;,
+    tags: [&#39;mongodb&#39;, &#39;database&#39;, &#39;NoSQL&#39;],
+    likes: 100
+    });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在執行插入動作&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;db.col.insert(document)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Laurance&#39;s Note</title>
+        <link>https://note.laurance.ml/tags/</link>
+        <description>Recent content in Tags on Laurance&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 13 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://note.laurance.ml/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Redis</title>
+        <link>https://note.laurance.ml/tags/redis/</link>
+        <pubDate>Thu, 13 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/redis/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Kubernetes</title>
+        <link>https://note.laurance.ml/tags/kubernetes/</link>
+        <pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/kubernetes/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker</title>
+        <link>https://note.laurance.ml/tags/docker/</link>
+        <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/docker/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GCP</title>
+        <link>https://note.laurance.ml/tags/gcp/</link>
+        <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/gcp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SVN</title>
+        <link>https://note.laurance.ml/tags/svn/</link>
+        <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/svn/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SECTIGO</title>
+        <link>https://note.laurance.ml/tags/sectigo/</link>
+        <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/sectigo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>AWS</title>
+        <link>https://note.laurance.ml/tags/aws/</link>
+        <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/aws/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PHP</title>
+        <link>https://note.laurance.ml/tags/php/</link>
+        <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/php/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Grafana</title>
+        <link>https://note.laurance.ml/tags/grafana/</link>
+        <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/grafana/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>influxdb</title>
+        <link>https://note.laurance.ml/tags/influxdb/</link>
+        <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/influxdb/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MySQL</title>
+        <link>https://note.laurance.ml/tags/mysql/</link>
+        <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/mysql/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>telegraf</title>
+        <link>https://note.laurance.ml/tags/telegraf/</link>
+        <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/telegraf/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows</title>
+        <link>https://note.laurance.ml/tags/windows/</link>
+        <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/windows/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>XenCenter</title>
+        <link>https://note.laurance.ml/tags/xencenter/</link>
+        <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/xencenter/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>FortiGate</title>
+        <link>https://note.laurance.ml/tags/fortigate/</link>
+        <pubDate>Tue, 20 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/fortigate/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Cacti</title>
+        <link>https://note.laurance.ml/tags/cacti/</link>
+        <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/cacti/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Iptables</title>
+        <link>https://note.laurance.ml/tags/iptables/</link>
+        <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/iptables/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CentOS</title>
+        <link>https://note.laurance.ml/tags/centos/</link>
+        <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/centos/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://note.laurance.ml/tags/linux/</link>
+        <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Memcache</title>
+        <link>https://note.laurance.ml/tags/memcache/</link>
+        <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/memcache/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Mongodb</title>
+        <link>https://note.laurance.ml/tags/mongodb/</link>
+        <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/mongodb/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GIT</title>
+        <link>https://note.laurance.ml/tags/git/</link>
+        <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Apache</title>
+        <link>https://note.laurance.ml/tags/apache/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/apache/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Crontab</title>
+        <link>https://note.laurance.ml/tags/crontab/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/crontab/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DNS</title>
+        <link>https://note.laurance.ml/tags/dns/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/dns/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>exporter</title>
+        <link>https://note.laurance.ml/tags/exporter/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/exporter/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>HTTP</title>
+        <link>https://note.laurance.ml/tags/http/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/http/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Logrotate</title>
+        <link>https://note.laurance.ml/tags/logrotate/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/logrotate/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MariaDB</title>
+        <link>https://note.laurance.ml/tags/mariadb/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/mariadb/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MFA</title>
+        <link>https://note.laurance.ml/tags/mfa/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/mfa/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Nginx</title>
+        <link>https://note.laurance.ml/tags/nginx/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/nginx/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>NodeJS</title>
+        <link>https://note.laurance.ml/tags/nodejs/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/nodejs/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Prometheus</title>
+        <link>https://note.laurance.ml/tags/prometheus/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/prometheus/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python</title>
+        <link>https://note.laurance.ml/tags/python/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/python/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Shell</title>
+        <link>https://note.laurance.ml/tags/shell/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/shell/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>ssh-keygen</title>
+        <link>https://note.laurance.ml/tags/ssh-keygen/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/ssh-keygen/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>VIM</title>
+        <link>https://note.laurance.ml/tags/vim/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/vim/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Zabbix</title>
+        <link>https://note.laurance.ml/tags/zabbix/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/zabbix/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>markdown</title>
+        <link>https://note.laurance.ml/tags/markdown/</link>
+        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/markdown/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>shortcodes</title>
+        <link>https://note.laurance.ml/tags/shortcodes/</link>
+        <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/tags/shortcodes/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

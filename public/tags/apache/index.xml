@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Apache on Laurance&#39;s Note</title>
+        <link>https://note.laurance.ml/tags/apache/</link>
+        <description>Recent content in Apache on Laurance&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 03 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://note.laurance.ml/tags/apache/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Apache-透過rsyslog同步log</title>
+        <link>https://note.laurance.ml/p/apache-%E9%80%8F%E9%81%8Ersyslog%E5%90%8C%E6%AD%A5log/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/apache-%E9%80%8F%E9%81%8Ersyslog%E5%90%8C%E6%AD%A5log/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/apache-%E9%80%8F%E9%81%8Ersyslog%E5%90%8C%E6%AD%A5log/100.png" alt="Featured image of post Apache-透過rsyslog同步log" /&gt;&lt;pre&gt;&lt;code&gt;編輯 Apache 設定檔
+vim /etc/httpd/conf/httpd.conf
+
+ErrorLogFormat &amp;quot;[%{u}t] [%-m:%l] [pid %P:tid %T] %7F: %E: [client\ %a] %M% ,\ referer\ %{Referer}i&amp;quot;
+&amp;lt;IfModule logio_module&amp;gt;
+LogFormat &amp;quot;%h %l %u %t \&amp;quot;%r\&amp;quot; %&amp;gt;s %O %I %T %b \&amp;quot;%{Referer}i\&amp;quot; \&amp;quot;%{User-Agent}i\&amp;quot;&amp;quot; nreporter
+&amp;lt;/IfModule&amp;gt;
+CustomLog &amp;quot;logs/access-NReporter_log&amp;quot; nreporter
+
+重啟 Apache 服務和確認 Apache 服務狀態
+systemctl restart httpd &amp;amp;&amp;amp; systemctl status httpd
+
+編輯 rsyslog 設定檔
+vim /etc/rsyslog.conf
+
+###MODULES###
+$ModLoad imfile # provides support for file logging
+# Send Apache log to N-Reporter
+input(type=&amp;quot;imfile&amp;quot; File=&amp;quot;/var/log/httpd/access-NReporter_log&amp;quot; Tag=&amp;quot;apache&amp;quot; Severity=&amp;quot;info&amp;quot; Facility=&amp;quot;local6&amp;quot;
+Ruleset=&amp;quot;nreporter&amp;quot;)
+input(type=&amp;quot;imfile&amp;quot; File=&amp;quot;/var/log/httpd/error_log&amp;quot; Tag=&amp;quot;apache&amp;quot; Severity=&amp;quot;warning&amp;quot; Facility=&amp;quot;local6&amp;quot;
+Ruleset=&amp;quot;nreporter&amp;quot;)
+ruleset(name=&amp;quot;nreporter&amp;quot;){action(type=&amp;quot;omfwd&amp;quot; Target=&amp;quot;192.168.2.69&amp;quot; Port=&amp;quot;514&amp;quot; Protocol=&amp;quot;udp&amp;quot;)}
+
+重啟 Rsyslog 服務和確認 Rsyslog 服務正常
+systemctl restart rsyslog &amp;amp;&amp;amp; systemctl status rsyslog
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Shell on Laurance&#39;s Note</title>
+        <link>https://note.laurance.ml/tags/shell/</link>
+        <description>Recent content in Shell on Laurance&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 03 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://note.laurance.ml/tags/shell/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux-建立新增使用者的shell</title>
+        <link>https://note.laurance.ml/p/linux-%E5%BB%BA%E7%AB%8B%E6%96%B0%E5%A2%9E%E4%BD%BF%E7%94%A8%E8%80%85%E7%9A%84shell/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/linux-%E5%BB%BA%E7%AB%8B%E6%96%B0%E5%A2%9E%E4%BD%BF%E7%94%A8%E8%80%85%E7%9A%84shell/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/linux-%E5%BB%BA%E7%AB%8B%E6%96%B0%E5%A2%9E%E4%BD%BF%E7%94%A8%E8%80%85%E7%9A%84shell/100.png" alt="Featured image of post Linux-建立新增使用者的shell" /&gt;&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+while [ &amp;quot;i&amp;quot; != &amp;quot;1&amp;quot; ]
+do
+echo -n new user name:
+
+read name
+
+useradd $name
+
+echo &amp;quot;123456&amp;quot; | passwd --stdin $name
+
+echo finish new user name is:$name
+done
+
+
+sed -i &amp;quot;s/GSSAPIAuthentication yes/GSSAPIAuthentication no/g&amp;quot; /etc/ssh/sshd_config
+sed -i &amp;quot;s/#UseDNS yes/UseDNS no/g&amp;quot; /etc/ssh/sshd_config
+service sshd restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

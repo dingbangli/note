@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>GCP on Laurance&#39;s Note</title>
+        <link>https://note.laurance.ml/categories/gcp/</link>
+        <description>Recent content in GCP on Laurance&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 06 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://note.laurance.ml/categories/gcp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GCP-硬碟擴容</title>
+        <link>https://note.laurance.ml/p/gcp-%E7%A1%AC%E7%A2%9F%E6%93%B4%E5%AE%B9/</link>
+        <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/gcp-%E7%A1%AC%E7%A2%9F%E6%93%B4%E5%AE%B9/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/gcp-%E7%A1%AC%E7%A2%9F%E6%93%B4%E5%AE%B9/100.png" alt="Featured image of post GCP-硬碟擴容" /&gt;&lt;pre&gt;&lt;code&gt;GCP上，點選硬盤，直接修改想要的硬盤大小(只能擴大、不能縮小)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-%E7%A1%AC%E7%A2%9F%E6%93%B4%E5%AE%B9/001.png&#34;
+	width=&#34;842&#34;
+	height=&#34;347&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-%E7%A1%AC%E7%A2%9F%E6%93%B4%E5%AE%B9/001_hub555f3ca9dd65f98a12f248c9c541f13_58628_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-%E7%A1%AC%E7%A2%9F%E6%93%B4%E5%AE%B9/001_hub555f3ca9dd65f98a12f248c9c541f13_58628_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;242&#34;
+		data-flex-basis=&#34;582px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;看一下目前的硬碟空間 lsblk
+
+會發現從 1.3T 變成 1.5T，但是用 df -h 卻沒看到空間增加
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;擴大分割區&lt;/p&gt;
+&lt;p&gt;以下是針對 sda 的第一個分割區擴大&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yum install cloud-utils-growpart
+
+growpart /dev/sda 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;擴大檔案系統空間&lt;/p&gt;
+&lt;p&gt;如果是 ext2, ext3, ext4 的 file system，則用 resize2fs，如果是 xfs，則用 xfs_growfs&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xfs
+
+xfs_growfs /dev/sda2
+
+ext4
+
+resize2fs /dev/sda2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>GCP- ASG執行範本建立與更新</title>
+        <link>https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/</link>
+        <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/100.png" alt="Featured image of post GCP- ASG執行範本建立與更新" /&gt;&lt;pre&gt;&lt;code&gt;模板機先建立快照 &amp;gt;&amp;gt; 再轉映像檔  
+
+區域選台灣 &amp;gt;&amp;gt; 按建立
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/001.png&#34;
+	width=&#34;426&#34;
+	height=&#34;747&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/001_hu24f37f3c846b2af3700fe7d21900d6cb_74423_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/001_hu24f37f3c846b2af3700fe7d21900d6cb_74423_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;57&#34;
+		data-flex-basis=&#34;136px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;建立執行個體範本
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/002.png&#34;
+	width=&#34;366&#34;
+	height=&#34;633&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/002_hu943e8b2d063bc25ef8692c4d62c1a53e_107359_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/002_hu943e8b2d063bc25ef8692c4d62c1a53e_107359_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;57&#34;
+		data-flex-basis=&#34;138px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;建立執行個體範本 網路分頁將外部IP 更改成無；勾選允許HTTP、HTTPS流量
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/003.png&#34;
+	width=&#34;245&#34;
+	height=&#34;423&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/003_huc080cdbb11a5739d2fec67bbb96e9da1_28835_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/003_huc080cdbb11a5739d2fec67bbb96e9da1_28835_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;57&#34;
+		data-flex-basis=&#34;139px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;建立完畢後 編輯執行個體群組 套用新的 執行個體範本 確認有出現後
+
+再開始進行web滾動更新
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/004.png&#34;
+	width=&#34;332&#34;
+	height=&#34;385&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/004_hu9f74ee4a4a1c079e510924af2eea689c_30071_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/004_hu9f74ee4a4a1c079e510924af2eea689c_30071_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;86&#34;
+		data-flex-basis=&#34;206px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GCP ASG-web滾動更新
+
+選擇執行各體群組 &amp;gt; 輪動式重新啟動/取代
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/005.png&#34;
+	width=&#34;552&#34;
+	height=&#34;234&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/005_hu6e125a54202131aad3ae69d79aceb659_52685_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/005_hu6e125a54202131aad3ae69d79aceb659_52685_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;566px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;點選取代 &amp;gt; 供應過度數量上限填1 &amp;gt; 無法使用的數量寫0  &amp;gt; 取代
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/006.png&#34;
+	width=&#34;353&#34;
+	height=&#34;381&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/006_hu85879fce5ad1d3faf093f44f6c412551_63039_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-asg%E5%9F%B7%E8%A1%8C%E7%AF%84%E6%9C%AC%E5%BB%BA%E7%AB%8B%E8%88%87%E6%9B%B4%E6%96%B0/006_hu85879fce5ad1d3faf093f44f6c412551_63039_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;92&#34;
+		data-flex-basis=&#34;222px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;PS:供應過度的數量上限: 是指滾動時，可超過當下存在的機器數量的上限
+如果原本上限是8台，填1時，滾動時上限可為9台
+如果是上班時段，建議填寫目前機器數量，滾動速度會比較快一點
+如果是維護其間，可填寫1 讓它慢慢替換
+
+-----------------------------------------------------------------------------------------------------------------
+
+無法使用的執行個體數量上限: 是指滾動時，群組裡面能有幾台無法使用
+這邊不管是上班或是維護期間 都應填寫0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>GCP-將MySQL-DB及BINLOG備份至Cloudstorage</title>
+        <link>https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/</link>
+        <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/100.png" alt="Featured image of post GCP-將MySQL-DB及BINLOG備份至Cloudstorage" /&gt;&lt;pre&gt;&lt;code&gt;1. 使用 nohup+&amp;amp; 背景執行資料庫壓縮 (除掉binlog)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/001.png&#34;
+	width=&#34;1916&#34;
+	height=&#34;240&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/001_hu153bb9e1103ba1e5c0c77634ab96d5a4_34461_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/001_hu153bb9e1103ba1e5c0c77634ab96d5a4_34461_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;798&#34;
+		data-flex-basis=&#34;1916px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2. 取第一支binlog跟最後一隻binlog的日期 (當作到時候壓縮的檔名)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/002.png&#34;
+	width=&#34;1892&#34;
+	height=&#34;958&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/002_hu29e15822d5311654c73473ab50e4c026_87562_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/002_hu29e15822d5311654c73473ab50e4c026_87562_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;473px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;3. 使用 nohup+&amp;amp; 背景執行binlog壓縮
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/003.png&#34;
+	width=&#34;1872&#34;
+	height=&#34;316&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/003_hud0eec7e8172a0d8ece65ef3efb8a178f_10773_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/003_hud0eec7e8172a0d8ece65ef3efb8a178f_10773_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;592&#34;
+		data-flex-basis=&#34;1421px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;4. 原本的驗證機制被刪除了 (gcloud auth login)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/004.png&#34;
+	width=&#34;1916&#34;
+	height=&#34;576&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/004_hu2d9bae668c55ff20a67688f31526c574_98788_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/004_hu2d9bae668c55ff20a67688f31526c574_98788_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;332&#34;
+		data-flex-basis=&#34;798px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/005.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;937&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/005_hu5c254e3ed29c4014dc55348ea3c6c23d_74674_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/005_hu5c254e3ed29c4014dc55348ea3c6c23d_74674_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;204&#34;
+		data-flex-basis=&#34;491px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;5. 將壓縮好的TAR包傳到中繼機 (之前跟GCP驗證過的機器)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/006.png&#34;
+	width=&#34;1870&#34;
+	height=&#34;306&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/006_hu4f746d53c6c23301e2d16a65c8615c6a_18343_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/006_hu4f746d53c6c23301e2d16a65c8615c6a_18343_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;611&#34;
+		data-flex-basis=&#34;1466px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;6. 上傳到GCP對應的目錄
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/007.png&#34;
+	width=&#34;1874&#34;
+	height=&#34;345&#34;
+	srcset=&#34;https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/007_hu8d6c9d615a4825675ca1fc1c98892618_18317_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/gcp-%E5%B0%87mysql-db%E5%8F%8Abinlog%E5%82%99%E4%BB%BD%E8%87%B3cloudstorage/007_hu8d6c9d615a4825675ca1fc1c98892618_18317_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;543&#34;
+		data-flex-basis=&#34;1303px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

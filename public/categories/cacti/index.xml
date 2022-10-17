@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cacti on Laurance&#39;s Note</title>
+        <link>https://note.laurance.ml/categories/cacti/</link>
+        <description>Recent content in Cacti on Laurance&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 14 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://note.laurance.ml/categories/cacti/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Cacti-新增機器及圖表</title>
+        <link>https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/</link>
+        <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/100.jpg" alt="Featured image of post Cacti-新增機器及圖表" /&gt;&lt;pre&gt;&lt;code&gt;1. 新建機器上面先安裝SNMP，並確保火牆有通 UDP161port
+    yum install -y net-snmp  net-snmp-utils
+
+2. Cacti 頁面新增 Device &amp;gt;&amp;gt; Add
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/001.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;969&#34;
+	srcset=&#34;https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/001_huc1cc09bd9649b9cbba3884ddd3fc6f86_394094_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/001_huc1cc09bd9649b9cbba3884ddd3fc6f86_394094_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;475px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;3. Device 填入機器的 hostname 及監控協議
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/002.png&#34;
+	width=&#34;1903&#34;
+	height=&#34;1524&#34;
+	srcset=&#34;https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/002_hu91503983570e14d431421d1cdb969e9a_319703_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/002_hu91503983570e14d431421d1cdb969e9a_319703_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;299px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;4. Datasource 新增要撈取的資料
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/003.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;969&#34;
+	srcset=&#34;https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/003_hu9da2109cbfff81133250e9edbba40c37_184370_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/003_hu9da2109cbfff81133250e9edbba40c37_184370_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;475px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;5. Graph Management 新增監控圖表
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/004.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;969&#34;
+	srcset=&#34;https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/004_hu1cd98eb262246d435000b9112edf33d3_150641_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/004_hu1cd98eb262246d435000b9112edf33d3_150641_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;475px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;6. Graph Trees 分類圖表群
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/005.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;969&#34;
+	srcset=&#34;https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/005_hu13e2a719c95a44550c9a3aca1c723257_234899_480x0_resize_box_3.png 480w, https://note.laurance.ml/p/cacti-%E6%96%B0%E5%A2%9E%E6%A9%9F%E5%99%A8%E5%8F%8A%E5%9C%96%E8%A1%A8/005_hu13e2a719c95a44550c9a3aca1c723257_234899_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;475px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        <item>
+        <title>Cacti-安裝方法</title>
+        <link>https://note.laurance.ml/p/cacti-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/</link>
+        <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://note.laurance.ml/p/cacti-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;img src="https://note.laurance.ml/p/cacti-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/100.jpg" alt="Featured image of post Cacti-安裝方法" /&gt;&lt;pre&gt;&lt;code&gt;#LAMP版本相依
+mysql版本：5.1.73或5.6
+apache版本：2.2.27
+php版本：5.5.16
+
+#安裝順序mysql &amp;gt; apache &amp;gt; PHP
+
+MySQL :
+#查看有無舊版本，若有則用rpm-e --nodeps強制刪除
+rpm -qa | grep mariadb
+rpm -qa | grep mysql
+#安裝mysql
+yum install mysql-community-server mysql-devel (centOS6 預設版本mysqk為5.1.73)
+
+Apache編譯語法 :
+./configure --prefix=/usr/local/web/apache2 --enable-ssl --enable-so  --enable-vhost-alias  --with-mpm=prefork
+
+PHP編譯語法 :
+&#39;./configure&#39; &#39;--prefix=/usr/local/web/php&#39; &#39;--with-apxs2=/usr/local/web/apache2/bin/apxs&#39; &#39;--with-mysql&#39; &#39;--with-mysqli&#39; &#39;--disable-cgi&#39; &#39;--with-iconv&#39; &#39;--disable-inline-optimization&#39; &#39;--enable-mbstring=tw&#39; &#39;--enable-sysvshm&#39; &#39;--enable-sysvsem&#39; &#39;--enable-sockets&#39; &#39;--with-jpeg-dir&#39; &#39;--with-png-dir&#39; &#39;--with-gd&#39; &#39;--with-zlib&#39; &#39;--with-curl&#39; &#39;--enable-zip&#39; &#39;--with-openssl-dir=/usr/lib/openssl&#39; &#39;--with-openssl&#39; &#39;--enable-opcache&#39;
+
+#安裝cacti
+tar zxvf cacti-0.8.7g.tar.gz
+
+再將cacti放置web存取的目錄下
+mv cacti-0.8.7g /home/cacti
+
+#安裝snmp
+yum install -y net-snmp  net-snmp-utils
+
+#安裝RRDTool
+cd rrdtool-1.0.50
+./configure --prefix=/usr/local/rrdtool 
+make
+make install
+
+#如果編譯有問題 可嘗試下面兩行指令 可能缺少的套件
+#ln -s /usr/local/libpng/lib/libpng.so /usr/lib/ 
+#ln -s /usr/local/freetype/lib/libfreetype.so /usr/lib/
+#yum -y install freetype-devel
+#yum -y install libpng-devel
+#yum -y install libart_lgpl-devel
+
+啟動mysql
+mysqld_safe &amp;amp;
+
+建立mysql的root帳號與密碼   
+mysqladmin -u root password &#39;密碼&#39; 
+
+建立資料庫 cacti
+mysqladmin --user=root -p create cacti
+
+將 cacti 目錄底下的cacti.sql 匯入資料庫 cacti 
+cd    /home/cacti/ 
+mysql -u root -p cacti &amp;lt; cacti.sql 
+
+進入MySQL並建立一個存取cacti資料庫的使用者cactiuser與密碼123456
+並給予權限 
+mysql    -u    root    -p 
+mysql&amp;gt; grant all on cacti.* to cactiuser@localhost identified by &#39;123456&#39;; 
+mysql&amp;gt; flush privileges; 
+mysql&amp;gt; exit 
+
+vim /home/cacti/include/config.php 
+(config.php 定義在cacti 資料庫進行存取時，所使用的帳號及密碼) 
+
+  26 $database_type = &amp;quot;mysql&amp;quot;; 
+  27 $database_default = &amp;quot;cacti&amp;quot;; 
+  28 $database_hostname = &amp;quot;localhost&amp;quot;; 
+  29 $database_username = &amp;quot;cactiuser&amp;quot;; 
+  30 $database_password = &amp;quot;kiwi888&amp;quot;; 
+  31 $database_port = &amp;quot;3306&amp;quot;;
+  
+建立使用者cactiuser，密碼是設定為123456
+useradd cactiuser
+
+切到cactiuser
+su - cactiuser
+
+設定排程 cacti 每1分鐘收集一次數據    
+crontab -e
+輸入
+*/1 * * * * /usr/local/bin/php  /home/cacti/poller.php &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+
+exit 離開cactiuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+
+</description>
+        </item>
+        
+    </channel>
+</rss>
